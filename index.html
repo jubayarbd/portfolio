@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahsan Habib Jubayer | Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS Reset & Variables --- */
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #e2e8f0;
+            --accent-color: #38bdf8; /* Cyan Blue */
+            --accent-glow: rgba(56, 189, 248, 0.5);
+            --card-bg: rgba(30, 41, 59, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* --- Main Container --- */
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            width: 100%;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* --- Name Typography --- */
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+            background: linear-gradient(to right, #fff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        /* --- Social Links Grid --- */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: var(--card-bg);
+            border-radius: 50%;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover Effects */
+        .social-btn:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: var(--accent-color);
+            color: var(--bg-color);
+            box-shadow: 0 0 20px var(--accent-glow);
+            border-color: transparent;
+        }
+
+        /* Specific Colors on Hover */
+        .social-btn.fb:hover { background: #1877F2; color: white; }
+        .social-btn.yt:hover { background: #FF0000; color: white; }
+        .social-btn.wa:hover { background: #25D366; color: white; }
+        .social-btn.gh:hover { background: #333; color: white; border: 1px solid white; }
+        .social-btn.in:hover { background: #0077b5; color: white; }
+
+        /* --- Footer --- */
+        footer {
+            margin-top: 4rem;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        /* --- Animation --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .tagline { font-size: 1rem; }
+            .social-links { gap: 1rem; }
+            .social-btn { width: 50px; height: 50px; font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ahsan Habib Jubayer</h1>
+        
+        <p class="tagline">Developer | Learner | Creator</p>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/jubayarbd.info/" target="_blank" class="social-btn fb" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@jubayarbd" target="_blank" class="social-btn yt" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+            <a href="https://wa.me/+8801842599274" target="_blank" class="social-btn wa" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="https://github.com/jubayarbd/" target="_blank" class="social-btn gh" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/ahsan-hj/" target="_blank" class="social-btn in" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+
+        <footer>
+            &copy; <span id="year"></span> Ahsan Habib Jubayer. All Rights Reserved.
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
