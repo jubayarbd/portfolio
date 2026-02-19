@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahsan Habib Jubayer | Portfolio</title>
-    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -60,8 +60,19 @@
 
         .tagline {
             font-size: 1.2rem;
-            color: #94a3b8;
-            margin-bottom: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        /* --- About Me Section --- */
+        .about-me {
+            font-size: 1.05rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto 2.5rem auto;
+            line-height: 1.7;
             font-weight: 300;
         }
 
@@ -71,19 +82,20 @@
             justify-content: center;
             gap: 1.5rem;
             flex-wrap: wrap;
+            margin-bottom: 2.5rem;
         }
 
         .social-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             background: var(--card-bg);
             border-radius: 50%;
             color: #fff;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
@@ -99,17 +111,43 @@
             border-color: transparent;
         }
 
-        /* Specific Colors on Hover */
         .social-btn.fb:hover { background: #1877F2; color: white; }
         .social-btn.yt:hover { background: #FF0000; color: white; }
         .social-btn.wa:hover { background: #25D366; color: white; }
         .social-btn.gh:hover { background: #333; color: white; border: 1px solid white; }
         .social-btn.in:hover { background: #0077b5; color: white; }
 
+        /* --- Buy Me a Coffee Button --- */
+        .bmc-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #FFDD00;
+            color: #0f172a;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .bmc-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 221, 0, 0.3);
+            background-color: #ffea00;
+        }
+
+        .bmc-btn i {
+            font-size: 1.2rem;
+        }
+
         /* --- Footer --- */
         footer {
             margin-top: 4rem;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: #64748b;
         }
 
@@ -123,8 +161,9 @@
         @media (max-width: 600px) {
             h1 { font-size: 2.5rem; }
             .tagline { font-size: 1rem; }
+            .about-me { font-size: 0.95rem; padding: 0 1rem; }
             .social-links { gap: 1rem; }
-            .social-btn { width: 50px; height: 50px; font-size: 1.2rem; }
+            .social-btn { width: 45px; height: 45px; font-size: 1.1rem; }
         }
     </style>
 </head>
@@ -135,25 +174,31 @@
         
         <p class="tagline">Developer | Learner | AI Explorer</p>
 
+        <p class="about-me">
+            Passionate about crafting apps, browser extensions, and practical digital tools designed to eliminate distractions and solve real-world problems.
+        </p>
+
         <div class="social-links">
             <a href="https://www.facebook.com/jubayarbd.info/" target="_blank" class="social-btn fb" title="Facebook">
                 <i class="fab fa-facebook-f"></i>
             </a>
-
             <a href="https://www.youtube.com/@jubayarbd" target="_blank" class="social-btn yt" title="YouTube">
                 <i class="fab fa-youtube"></i>
             </a>
-
             <a href="https://wa.me/+8801842599274" target="_blank" class="social-btn wa" title="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
             </a>
-
             <a href="https://github.com/jubayarbd/" target="_blank" class="social-btn gh" title="GitHub">
                 <i class="fab fa-github"></i>
             </a>
-
             <a href="https://www.linkedin.com/in/ahsan-hj/" target="_blank" class="social-btn in" title="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+
+        <div>
+            <a href="https://www.supportkori.com/jubayar" target="_blank" class="bmc-btn">
+                <i class="fas fa-mug-hot"></i> Buy me a coffee
             </a>
         </div>
 
@@ -167,5 +212,4 @@
     </script>
 
 </body>
-
 </html>
