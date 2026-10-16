@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJ7H9YRNY0"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-RJ7H9YRNY0');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RJ7H9YRNY0');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahsan Habib Jubayer | Portfolio</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -23,7 +24,8 @@
         :root {
             --bg-color: #0f172a;
             --text-color: #e2e8f0;
-            --accent-color: #38bdf8; /* Cyan Blue */
+            --accent-color: #38bdf8;
+            /* Cyan Blue */
             --accent-glow: rgba(56, 189, 248, 0.5);
             --card-bg: rgba(30, 41, 59, 0.7);
         }
@@ -55,6 +57,45 @@
             animation: fadeIn 1.5s ease-in-out;
         }
 
+        /* --- Profile Avatar --- */
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            padding: 3px;
+            border: 2px solid rgba(255, 255, 255, 0.12);
+            background: rgba(30, 41, 59, 0.6);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .status-indicator {
+            position: absolute;
+            bottom: 6px;
+            right: 6px;
+            width: 22px;
+            height: 22px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            border: 3.5px solid #1b2537;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+        }
+
         /* --- Name Typography --- */
         h1 {
             font-size: 3.5rem;
@@ -63,6 +104,7 @@
             letter-spacing: -1px;
             background: linear-gradient(to right, #fff, var(--accent-color));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 20px var(--accent-glow);
         }
@@ -120,11 +162,31 @@
             border-color: transparent;
         }
 
-        .social-btn.fb:hover { background: #1877F2; color: white; }
-        .social-btn.yt:hover { background: #FF0000; color: white; }
-        .social-btn.wa:hover { background: #25D366; color: white; }
-        .social-btn.gh:hover { background: #333; color: white; border: 1px solid white; }
-        .social-btn.in:hover { background: #0077b5; color: white; }
+        .social-btn.fb:hover {
+            background: #1877F2;
+            color: white;
+        }
+
+        .social-btn.yt:hover {
+            background: #FF0000;
+            color: white;
+        }
+
+        .social-btn.wa:hover {
+            background: #25D366;
+            color: white;
+        }
+
+        .social-btn.gh:hover {
+            background: #333;
+            color: white;
+            border: 1px solid white;
+        }
+
+        .social-btn.in:hover {
+            background: #0077b5;
+            color: white;
+        }
 
         /* --- Buy Me a Coffee Button --- */
         .bmc-btn {
@@ -162,25 +224,70 @@
 
         /* --- Animation --- */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* --- Mobile Responsiveness --- */
         @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            .tagline { font-size: 1rem; }
-            .about-me { font-size: 0.95rem; padding: 0 1rem; }
-            .social-links { gap: 1rem; }
-            .social-btn { width: 45px; height: 45px; font-size: 1.1rem; }
+            .avatar-wrapper {
+                width: 110px;
+                height: 110px;
+            }
+
+            .status-indicator {
+                width: 18px;
+                height: 18px;
+                bottom: 4px;
+                right: 4px;
+                border-width: 3px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .about-me {
+                font-size: 0.95rem;
+                padding: 0 1rem;
+            }
+
+            .social-links {
+                gap: 1rem;
+            }
+
+            .social-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
+        <div class="profile-container">
+            <div class="avatar-wrapper">
+                <img src="jubayar.webp" alt="Ahsan Habib Jubayer" class="profile-img">
+                <span class="status-indicator" title="Available"></span>
+            </div>
+        </div>
+
         <h1>Ahsan Habib Jubayer</h1>
-        
+
         <p class="tagline">Developer | Learner | AI Explorer</p>
 
         <p class="about-me">
@@ -221,6 +328,5 @@
     </script>
 
 </body>
+
 </html>
-
-
